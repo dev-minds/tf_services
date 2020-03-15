@@ -34,3 +34,12 @@ override.tf.json
 
 # End of https://www.gitignore.io/api/terraform
 
+# TERRAGRUNT ignore block 
+# Created by https://www.gitignore.io/api/terragrunt
+# Edit at https://www.gitignore.io/?templates=terragrunt
+
+### Terragrunt ###
+# terragrunt cache directories
+**/.terragrunt-cache/*
+
+# End of https://www.gitignore.io/api/terragrunt
