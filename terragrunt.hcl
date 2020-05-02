@@ -15,7 +15,6 @@ generate "provider" {
     contents = <<EOF
 provider "aws" {
     region = "${local.aws_region}"
-    
 }
 EOF
 }
@@ -24,7 +23,7 @@ remote_state {
     backend = "s3"
     config = {
         encrypt     = true 
-        bucket      = "${get_env("TG_BUCKET_PREFIX", "")}-tg-dm-acct-state-${local.aws_region}"
+        bucket      = "${get_env("TG_BUCKET_PREFIX", "")}-tg-global-org-state-${local.aws_region}"
         key         = "${path_relative_to_include()}/terraform.tfstate"
         region      = local.aws_region
         dynamodb_table = "terraform-locks"
