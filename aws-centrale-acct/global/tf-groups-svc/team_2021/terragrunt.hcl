@@ -6,7 +6,7 @@ locals {
 terraform {
     // source = "git::https://github.com/dev-minds/tf_modules.git//fm_s3_mod?ref=master"
     // source = "git::https://github.com/dev-minds/tf_modules.git//fm_vpc_mod/dm_simple_vpc?ref=master"
-    source = "git::https://github.com/dev-minds/tf_modules.git//fm_rbac_mod/iam-users?ref=master"
+    source = "git::https://github.com/dev-minds/tf_modules.git//fm_rbac_mod/iam-groups?ref=master"
 }
 
 include {
@@ -14,7 +14,8 @@ include {
 }
 
 inputs = {
-    all_users = [
+    grp_name = "team_2021"
+    grp_users = [
         "yemi",
         "uche",
         "seun",
